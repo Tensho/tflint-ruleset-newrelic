@@ -1,0 +1,3 @@
+plugin "newrelic" {
+  enabled = true
+}

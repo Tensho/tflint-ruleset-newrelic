@@ -1,7 +1,8 @@
-# TFLint Ruleset Template
-[![Build Status](https://github.com/terraform-linters/tflint-ruleset-template/workflows/build/badge.svg?branch=main)](https://github.com/terraform-linters/tflint-ruleset-template/actions)
+# TFLint Ruleset NewRelic
+[![Build Status](https://github.com/Tensho/tflint-ruleset-newrelic/workflows/build/badge.svg?branch=main)](https://github.com/terraform-linters/tflint-ruleset-template/actions)
 
-This is a template repository for building a custom ruleset. You can create a plugin repository from "Use this template". See also [Writing Plugins](https://github.com/terraform-linters/tflint/blob/master/docs/developer-guide/plugins.md).
+Custom [NewRelic](https://newrelic.com) plugin.
+See also [Writing Plugins](https://github.com/terraform-linters/tflint/blob/master/docs/developer-guide/plugins.md).
 
 ## Requirements
 
@@ -10,24 +11,14 @@ This is a template repository for building a custom ruleset. You can create a pl
 
 ## Installation
 
-TODO: This template repository does not contain release binaries, so this installation will not work. Please rewrite for your repository. See the "Building the plugin" section to get this template ruleset working.
-
 You can install the plugin with `tflint --init`. Declare a config in `.tflint.hcl` as follows:
 
 ```hcl
-plugin "template" {
+plugin "newrelic" {
   enabled = true
 
   version = "0.1.0"
-  source  = "github.com/terraform-linters/tflint-ruleset-template"
-
-  signing_key = <<-KEY
-  -----BEGIN PGP PUBLIC KEY BLOCK-----
-  mQINBGCqS2YBEADJ7gHktSV5NgUe08hD/uWWPwY07d5WZ1+F9I9SoiK/mtcNGz4P
-  JLrYAIUTMBvrxk3I+kuwhp7MCk7CD/tRVkPRIklONgtKsp8jCke7FB3PuFlP/ptL
-  SlbaXx53FCZSOzCJo9puZajVWydoGfnZi5apddd11Zw1FuJma3YElHZ1A1D2YvrF
-  ...
-  KEY
+  source  = "github.com/Tensho/tflint-ruleset-newrelic"
 }
 ```
 
@@ -58,7 +49,7 @@ You can run the built plugin like the following:
 
 ```
 $ cat << EOS > .tflint.hcl
-plugin "template" {
+plugin "newrelic" {
   enabled = true
 }
 EOS
